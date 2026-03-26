@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Parking Detection</title>
+</head>
+
+<body>
+
+<h2>AI Smart Parking System</h2>
+
+<form method="POST" enctype="multipart/form-data">
+<input type="file" name="image">
+<button type="submit">Find Parking</button>
+</form>
+
+{% if image %}
+<h3>Detection Result</h3>
+<img src="{{ image }}" width="500">
+{% endif %}
+
+{% if status %}
+<h2>{{ status }}</h2>
+{% endif %}
+
+</body>
+</html>
